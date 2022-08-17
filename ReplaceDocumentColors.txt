@@ -11,16 +11,20 @@ Sub ReplaceColorsAndRemoveBGColor
           oSec = oSecEnum.nextElement()
           If oSec.TextPortionType = "Text" Then
           	oSec.CharBackColor = -1
-            If oSec.CharColor = RGB(0,0,0) Then
-                oSec.CharColor = RGB(255,0,0)
-            rem ElseIf oSec.CharHeight = 18 Then
-            rem    oSec.CharHeight = 22.0
-            rem Else
-            rem    oSec.CharHeight = 12.0
+            If oSec.CharColor = RGB(230,230,250) Then
+                rem change to magenta
+                oSec.CharColor = RGB(191,0,65)
+            ElseIf oSec.CharColor = RGB(249,250,244) Then
+                rem change to magenta
+                oSec.CharColor = RGB(191,0,65)
+            ElseIf oSec.CharColor = RGB(217,232,247) Then
+                rem change to black
+                oSec.CharColor = RGB(0,0,0)
+            Else
+                rem do nothing
             End If
           End If
         Loop
       End If
     Loop
 End Sub
-
